@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<!-- Google Font (Poppins) -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =======================
+   ROOT COLORS (THEME)
+======================= */
+:root {
+  --bg-color: #f8f6f2;      /* light cream */
+  --primary: #6b8e6b;       /* sage green */
+  --text: #2e2e2e;          /* dark gray */
+  --white: #ffffff;
+}
+
+/* =======================
+   GLOBAL STYLING
+======================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text);
+}
+
+/* =======================
+   NAVIGATION BAR
+======================= */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: var(--bg-color);
+}
+
+/* Logo */
+.logo {
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--primary);
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+/* Hover effect on links */
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* =======================
+   HERO SECTION
+======================= */
+.hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+/* Highlight text */
+.hero-content h1 span {
+  color: var(--primary);
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  opacity: 0.8;
+}
+
+/* =======================
+   BUTTON STYLE
+======================= */
+.btn {
+  background: var(--primary);
+  color: var(--white);
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px; /* rounded corners */
+  cursor: pointer;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* soft shadow */
+  transition: 0.3s;
+}
+
+/* Hover effect on button */
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+/* =======================
+   PORTFOLIO SECTION
+======================= */
+.portfolio {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.portfolio h2 {
+  margin-bottom: 40px;
+}
+
+/* Grid layout */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* Project cards */
+.card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* =======================
+   CONTACT SECTION
+======================= */
+.contact {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =======================
+     NAVBAR
+======================= -->
+<nav>
+  <div class="logo">MyPortfolio</div>
+
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- =======================
+     HERO SECTION
+======================= -->
+<section class="hero">
+  <div class="hero-content">
+    
+    <!-- Main Heading -->
+    <h1>Hello, I'm a <span>Web Designer</span></h1>
+    
+    <!-- Subheading -->
+    <p>I create modern, aesthetic and high-converting websites</p>
+    
+    <!-- Call to Action Button -->
+    <button class="btn">Get Your Website</button>
+
+  </div>
+</section>
+
+<!-- =======================
+     PORTFOLIO SECTION
+======================= -->
+<section class="portfolio" id="portfolio">
+  <h2>My Work</h2>
+
+  <div class="projects">
+    <div class="card">Project One</div>
+    <div class="card">Project Two</div>
+    <div class="card">Project Three</div>
+  </div>
+</section>
+
+<!-- =======================
+     CONTACT SECTION
+======================= -->
+<section class="contact" id="contact">
+  <h2>Contact Me</h2>
+  <p>Email: your@email.com</p>
+</section>
+
+<!-- =======================
+     FOOTER
+======================= -->
+<footer>
+  © 2026 Your Name
+</footer>
+
+</body>
+</html>
