@@ -1,16 +1,213 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<tittle>My Website</title>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
 
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #fdf6ec, #dff5e1);
+      color: #333;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.3);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #4caf7d;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #4caf7d, #7bdcb5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .btn {
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #4caf7d, #7bdcb5);
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 10px 20px rgba(76,175,125,0.3);
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 15px 30px rgba(76,175,125,0.5);
+    }
+
+    /* SERVICES */
+    .services {
+      padding: 60px 40px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 280px;
+      padding: 30px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.3);
+      border: 1px solid rgba(255,255,255,0.4);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+
+    /* PORTFOLIO */
+    .portfolio {
+      padding: 60px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project {
+      height: 200px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.4);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #666;
+    }
+
+  </style>
+</head>
 <body>
 
-<h1>Welcome to my website</h1>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">My Portfolio</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 
-<p>This is my wesite.</p>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Hello I'm a <span class="gradient-text">Web Designer</span></h1>
+    <button class="btn">View Work</button>
+  </section>
 
-<a href="about.html">About</a>
-<a href="contact.html">contact</a>
+  <!-- SERVICES -->
+  <section class="services">
+    <div class="card">
+      <h3>UI Design</h3>
+      <p>Modern and clean interface designs.</p>
+    </div>
+
+    <div class="card">
+      <h3>Web Development</h3>
+      <p>Responsive and fast websites.</p>
+    </div>
+
+    <div class="card">
+      <h3>Branding</h3>
+      <p>Unique identity for your brand.</p>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio">
+    <div class="project"></div>
+    <div class="project"></div>
+    <div class="project"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 My Portfolio. All rights reserved.
+  </footer>
 
 </body>
 </html>
